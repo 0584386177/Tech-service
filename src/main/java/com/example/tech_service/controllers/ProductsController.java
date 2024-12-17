@@ -1,7 +1,7 @@
 package com.example.laptop_stores.controllers;
 
 import com.example.laptop_stores.models.Product;
-import com.example.laptop_stores.services.ProductsRepository;
+import com.example.laptop_stores.repository.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,5 +51,12 @@ public class ProductsController {
         model.addAttribute("products", products);
         return "products/cart";
     }
+    // Hiển thị danh sách sản phẩm
+//    @GetMapping
+//    public String listProducts(Model model) {
+//        model.addAttribute("products", repo.getAllProducts());
+//        return "admin/products";
+//    }
+
 
 }
