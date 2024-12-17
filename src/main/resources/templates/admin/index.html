@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/admin/fragments/head :: head"></head>
+<!-- Site wrapper -->
+<div class="wrapper">
+
+    <!-- =============================================== -->
+    <header th:replace="/admin/fragments/header :: header"></header>
+    <!-- Left side column. contains the sidebar -->
+    <!-- =============================================== -->
+    <aside th:replace="/admin/fragments/sidebar :: sidebar"></aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer th:replace="/admin/fragments/footer :: footer"></footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/jquery-ui.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/js/adminlte.min.js}"></script>
+<script th:src="@{/assets/js/dashboard.js}"></script>
+<script th:src="@{/assets/tinymce/tinymce.min.js}"></script>
+<script th:src="@{/assets/tinymce/config.js}"></script>
+<script th:src="@{/assets/js/function.js}"></script>
+<!-- MDB -->
+
+</body>
+</html>

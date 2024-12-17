@@ -5,17 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css" rel="stylesheet"/>
 
+    <style>
+        .navbar{
+            height: 60px;
+            position: fixed;
+            z-index: 99;
+            width: 100%;
+            background-color: #fff;
+        }
+        .navbar-brand {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color:black;
+        }
+        .navbar-brand img{
+            width: 180px;
+            height: 50px;
+            object-fit: cover;
+
+        }
+        .cdt-title{
+            text-align: center;
+        }
         .nav-link {
             font-size: 1.1rem;
+            color: black;
+        }
+        .nav-link:hover{
+            color: #7f7f7f;
         }
 
         .footer {
@@ -128,31 +153,42 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
+
             <a class="navbar-brand" href="/">
-                <i class="fas fa-laptop me-2"></i>NIN IT STORE
+                <img src="https://techservicelap.vn/wp-content/uploads/2024/10/tech-service-02-e1728373781695.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="input-group" style="
+    width: 21rem;
+">
+                <div class="form-outline" data-mdb-input-init="" data-mdb-input-initialized="true" style="
+    width: 400px;
+">
+                    <input style="width:200px;" type="search" id="form1" class="form-control">
+                    <label class="form-label" for="form1" style="margin-left: 0px;">Tìm kiếm sản phẩm</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                <button type="button" class="btn btn-primary" data-mdb-ripple-init="">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i>Home</a>
+                        <a class="nav-link" href="/">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/product"><i class="fas fa-laptop me-1"></i>Products</a>
+                        <a class="nav-link" href="/product">Sản phẩm</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="/contact"><i class="fas fa-envelope me-1"></i>Contact</a>
+                        <a class="nav-link" href="/contact">Liên hệ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile"><i class="fas fa-user me-1"></i>Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart me-1"></i>Cart</a>
+                        <a class="nav-link" href="/cart">Giỏ hàng</a>
                     </li>
                 </ul>
             </div>
@@ -160,64 +196,72 @@
     </nav>
 
     <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="text-center section-title">Get In Touch</h2>
+    <section class="text-center" style="padding: 80px 0">
 
-            <div class="row mb-5">
-                <div class="col-md-4 mb-4">
-                    <div class="contact-info-box text-center">
-                        <div class="contact-info-icon mx-auto">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Our Location</h4>
-                        <p class="mb-0">123 Tech Street, Digital City</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="contact-info-box text-center">
-                        <div class="contact-info-icon mx-auto">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Call Us</h4>
-                        <p class="mb-0">+1 234 567 890</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="contact-info-box text-center">
-                        <div class="contact-info-icon mx-auto">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Email Us</h4>
-                        <p class="mb-0">info@laptopstore.com</p>
-                    </div>
-                </div>
+
+        <h3 class="mb-5">THÔNG TIN CỬA HÀNG</h3>
+
+        <div class="row">
+            <div class="col-lg-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61349.647006429375!2d108.16741744275939!3d16.047164814854927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b34a484589%3A0x953c51eb37787772!2zVGVjaCBTZXJ2aWNlIC0gQ-G7rWEgaMOgbmcgYsOhbiBs4bq7IHRoaeG6v3QgYuG7iyDEkWnhu4duIHThu60gTGFwdG9wIFN1cmZhY2UsIExlbm92byBUaGlua3BhZCwgR8OzaSBwaOG6p24gbeG7gW0gUHJvICYgU-G7rWEgY2jhu69hIGThu4tjaCB24bul!5e0!3m2!1svi!2s!4v1734408655623!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="contact-form">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name">
+            <div class="col-lg-7">
+                <form>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <div data-mdb-input-init class="form-outline">
+                                        <input type="text" id="form3Example1" class="form-control" />
+                                        <label class="form-label" for="form3Example1">First name</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email">
+                                    <div data-mdb-input-init class="form-outline">
+                                        <input type="email" id="form3Example2" class="form-control" />
+                                        <label class="form-label" for="form3Example2">Email Address</label>
+                                    </div>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" placeholder="Subject">
-                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                            <div class="text-center">
-                                <button type="submit" class="submit-btn">Send Message</button>
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="text" id="form3Example3" class="form-control" />
+                                <label class="form-label" for="form3Example3">Subject</label>
                             </div>
-                        </form>
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                                <label class="form-label" for="form4Example3">Message</label>
+                            </div>
+                            <div class="text-center text-md-start">
+                                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary mb-5 mb-md-0">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                                    <p><small>Tầng 2, 266 Phan Châu Trinh,Q.Hải Châu,TP.Đà Nẵng.</small></p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone fa-2x text-primary"></i>
+                                    <p><small>0584.386.177</small></p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope fa-2x text-primary"></i>
+                                    <p><small>techservicevna@gmail.com</small></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </form>
+
             </div>
         </div>
-    </section>
 
+
+    </section>
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="padding-top:5px;">
 

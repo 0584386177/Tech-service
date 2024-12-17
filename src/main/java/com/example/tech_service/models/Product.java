@@ -1,10 +1,9 @@
-package com.example.laptop_stores.models;
+package com.example.tech_service.models;
 
 import jakarta.persistence.*;
 import java.text.DecimalFormat;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 @Entity
 @Table(name = "computer_infor")
@@ -15,13 +14,14 @@ public class Product {
     private String description;
     private String name;
     private String image;
+    @Column(precision = 20, scale = 2)  // Định nghĩa độ chính xác và số chữ số sau dấu phẩy
     private BigDecimal price;
-    private BigDecimal sale;
+    private double sale;
 
     public Product() {
     }
 
-    public Product(int id, String description, String name, String image, BigDecimal price, BigDecimal sale) {
+    public Product(int id, String description, String name, String image, BigDecimal price, double sale) {
         this.id = id;
         this.description = description;
         this.name = name;
@@ -73,15 +73,12 @@ public class Product {
 
         this.price = price;
     }
-    public String getFormattedPrice() {
-        DecimalFormat formatter = new DecimalFormat("#,###");
-        return formatter.format(price) + " VND";
-    }
-    public BigDecimal getSale() {
+
+    public double getSale() {
         return sale;
     }
 
-    public void setSale(BigDecimal sale) {
+    public void setSale(double sale) {
         this.sale = sale;
     }
 }

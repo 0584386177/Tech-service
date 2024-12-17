@@ -1,7 +1,7 @@
-package com.example.laptop_stores.controllers;
+package com.example.tech_service.controllers;
 
-import com.example.laptop_stores.models.Product;
-import com.example.laptop_stores.repository.ProductsRepository;
+import com.example.tech_service.models.Product;
+import com.example.tech_service.repository.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +22,7 @@ public class ProductsController {
         List<Product> products = repo.findAll();
         model.addAttribute("products", products);
         return "products/index";
+
     }
 
     @GetMapping("/product")
@@ -29,6 +30,7 @@ public class ProductsController {
         List<Product> products = repo.findAll();
         model.addAttribute("products", products);
         return "products/product";
+
     }
 
     @GetMapping("/contact")

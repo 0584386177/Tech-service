@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/admin/fragments/head :: head"></head>
+<style>
+
+    .content-wrapper {
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+    }
+
+    .content-header h1 {
+        color: #333;
+        margin-left: 17rem;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    table {
+        width: 87%;
+        border-collapse: collapse;
+        margin: 20px 20rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    img {
+        border-radius: 5px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .btn-edit {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .btn-delete {
+        background-color: #f44336;
+        color: white;
+    }
+</style>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+    <!-- =============================================== -->
+    <header th:replace="/admin/fragments/header :: header"></header>
+    <!-- Left side column. contains the sidebar -->
+
+    <!-- =============================================== -->
+    <aside th:replace="/admin/fragments/sidebar :: sidebar"></aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                QUẢN LÝ DANH SÁCH
+            </h1>
+        </section>
+
+        <!-- Main content -->
+        <table>
+            <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Giá tiền</th>
+                <th>Mô tả</th>
+                <th>Hình ảnh</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.sale}"></td>
+                <td th:text="${product.description}"></td>
+                <td><img th:src="${product.image}" alt="product image"></td>
+                <td class="action-buttons">
+                    <a href="#" class="btn btn-edit">Chỉnh sửa</a>
+                    <a href="#" class="btn btn-delete" th:href="@{/admin/delete/{id}(id=${product.id})}">Xóa</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer th:replace="/admin/fragments/footer :: footer"></footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/jquery-ui.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/js/adminlte.min.js}"></script>
+<script th:src="@{/assets/js/dashboard.js}"></script>
+<script th:src="@{/assets/tinymce/tinymce.min.js}"></script>
+<script th:src="@{/assets/tinymce/config.js}"></script>
+<script th:src="@{/assets/js/function.js}"></script>
+</body>
+</html>
