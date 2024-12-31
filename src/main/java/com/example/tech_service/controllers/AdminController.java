@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin")
 public class AdminController {
 
-    @Autowired
+        @Autowired
     private ProductsService productService;
 
     // Trang chính của admin (Được truy cập qua /admin)

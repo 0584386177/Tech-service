@@ -106,6 +106,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
+  background-color: #00a7d0;;
 }
 .fixed .content-wrapper,
 .fixed .right-side {
